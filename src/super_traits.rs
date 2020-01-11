@@ -61,7 +61,7 @@ impl Programmer for GraduateProgrammer {
 
 #[cfg(test)]
 mod tests {
-    use crate::supertraits::{programmer_housemate_greeter, GraduateProgrammer};
+    use crate::super_traits::{programmer_housemate_greeter, GraduateProgrammer};
 
     #[test]
     fn test_programmer_housemate_greeter() {

@@ -1,5 +1,6 @@
-mod returning;
-mod supertraits;
+mod dynamic_dispatch;
+mod static_dispatch;
+mod super_traits;
 
 #[cfg(test)]
 mod tests {
