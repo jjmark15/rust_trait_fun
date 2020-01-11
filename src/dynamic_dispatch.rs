@@ -18,17 +18,23 @@ impl Monster for Hydra {
     }
 }
 
-/// # Example
-/// ```rust
-/// let random_number = 0.234;
-/// let monster = random_monster(random_number);
-/// assert_eq!("brwaaagh!", monster.noise(), "assert monster noise")
-/// ```
 #[allow(dead_code)]
 fn random_monster(random_number: f64) -> Box<dyn Monster> {
     if random_number < 0.5 {
         Box::new(Dragon {})
     } else {
         Box::new(Hydra {})
+    }
+}
+
+#[cfg(test)]
+mod tests {
+    use crate::dynamic_dispatch::random_monster;
+
+    #[test]
+    fn test_random_monster() {
+        let random_number = 0.234;
+        let monster = random_monster(random_number);
+        assert_eq!("brwaaagh!", monster.noise(), "assert monster noise");
     }
 }
