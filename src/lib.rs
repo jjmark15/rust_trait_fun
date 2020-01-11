@@ -1,3 +1,5 @@
+mod supertraits;
+
 #[cfg(test)]
 mod tests {
     #[test]
